@@ -44,8 +44,13 @@ void loop() {
   val_J2 = map(val_J2, 0, 1023, 500, 5000);     // scale it to use it with the servo (value between 0 and 180) 
   
   servoMove(J1,val_J1);
+  servoMove(J2, val_J2);
   delay(50);
   //servoMove(servo0,4000);
+  Serial.print("J1: ");
+  Serial.print(val_J1);
+  Serial.print("\t J2: ");
+  Serial.println(val_J2);
 }
 
 /*
